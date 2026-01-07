@@ -4,3 +4,5 @@ A repository is like a notebook.
 Files are pages.
 Commits are saved checkpoints.
 Git helps track changes safely.
+This line is added to understand git diff.
+I am beginning to learn Cybersecurity
