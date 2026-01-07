@@ -1,0 +1,6 @@
+PHASE 1 – GIT BASICS
+
+A repository is like a notebook.
+Files are pages.
+Commits are saved checkpoints.
+Git helps track changes safely.
