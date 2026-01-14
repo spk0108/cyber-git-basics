@@ -1,13 +1,23 @@
 #!/bin/bash
 
-echo "===== SYSTEM & NETWORK INFO ====="
-echo "Hostname:"
-hostname
+LOGFILE="network_info_$(date +%Y-%m-%d_%H-%M-%S).log"
 
-echo ""
-echo "Current User:"
-whoami
+{
+  echo "===== SYSTEM & NETWORK INFORMATION ====="
+  echo "Collected on: $(date)"
+  echo ""
 
-echo ""
-echo "IP Configuration:"
-ipconfig
+  echo "Hostname:"
+  hostname
+  echo ""
+
+  echo "Current User:"
+  whoami
+  echo ""
+
+  echo "IP Configuration:"
+  ipconfig
+  echo ""
+} | tee "$LOGFILE"
+
+echo "Information saved to $LOGFILE"
