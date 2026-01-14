@@ -1,23 +1,33 @@
 #!/bin/bash
 
-LOGFILE="network_info_$(date +%Y-%m-%d_%H-%M-%S).log"
+#--------------------
+# Tool Name : network-info.sh
+# Purpose : Display basic system and network information
+# Author : Srivatsa
+#--------------------
 
-{
-  echo "===== SYSTEM & NETWORK INFORMATION ====="
-  echo "Collected on: $(date)"
-  echo ""
+echo "======= SYSTEM & NETWORK INFORMATION ======="
+echo "Date & Time:"
+date
+echo
 
-  echo "Hostname:"
-  hostname
-  echo ""
+echo "Hostname:"
+hostname
+echo
 
-  echo "Current User:"
-  whoami
-  echo ""
+echo "Current User:"
+whoami
+echo
 
-  echo "IP Configuration:"
-  ipconfig
-  echo ""
-} | tee "$LOGFILE"
+echo "Operating System:"
+uname -a
+echo
+echo "Network Interface:"
+ipconfig
+echo
 
-echo "Information saved to $LOGFILE"
+echo "IP Configuration:"
+route print
+echo
+
+echo "============================="
